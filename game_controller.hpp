@@ -3,15 +3,20 @@
 
 #include <iostream>
 
+#include "game_view.hpp"
+
 using namespace std;
 
 class GameController {
- public:
+public:
   GameController();
   ~GameController();
 
   void Welcome();
   void PickCharacter();
+
+private:
+  GameView game_view_;
 };
 
 #endif

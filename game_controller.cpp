@@ -1,6 +1,8 @@
 #include "game_controller.hpp"
 
-GameController::GameController() {};
+GameController::GameController() {
+  game_view_ = GameView();
+};
 
 GameController::~GameController() {};
 
@@ -10,4 +12,5 @@ void GameController::Welcome() {
 
 void GameController::PickCharacter() {
   cout << "Now pick your bloody character!\n";
+  game_view_.DisplayGame();
 };
