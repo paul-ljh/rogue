@@ -11,6 +11,7 @@ void GameController::Welcome() {
 };
 
 void GameController::PickCharacter() {
-  cout << "Now pick your bloody character!\n";
+  cout << "Now pick your bloody character!" << endl;
+  cout << "s, d, v, g, t" << endl;
   game_view_.DisplayGame();
 };
