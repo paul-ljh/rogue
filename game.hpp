@@ -5,6 +5,8 @@
 #include <sstream>
 #include <string>
 
+#include "board.hpp"
+
 using namespace std;
 
 class Game {
@@ -12,16 +14,9 @@ public:
   Game();
   ~Game();
 
-  void PrintBoard();
-
+  void PrintGame();
 private:
-  static const char kHorizontalBorderSegment;
-  static const char kVerticalBorderSegment;
-  static const int kLength;
-  static const int kWidth;
-  static const string kTopBottomBorder;
-
-  void PrintCells();
+  Board board;
 };
 
 #endif

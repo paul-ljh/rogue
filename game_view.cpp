@@ -7,5 +7,5 @@ GameView::GameView() {
 GameView::~GameView() {};
 
 void GameView::DisplayGame() {
-  game.PrintBoard();
+  game.PrintGame();
 };
