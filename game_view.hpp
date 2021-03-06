@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "game_model.hpp"
+#include "game.hpp"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ public:
   void DisplayGame();
 
 private:
-  GameModel game_model_;
+  Game game;
 };
 
 #endif

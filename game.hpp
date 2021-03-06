@@ -1,5 +1,5 @@
-#ifndef GAME_MODEL_H
-#define GAME_MODEL_H
+#ifndef GAME_H
+#define GAME_H
 
 #include <iostream>
 #include <sstream>
@@ -7,15 +7,15 @@
 
 using namespace std;
 
-class GameModel {
+class Game {
 public:
-  GameModel();
-  ~GameModel();
+  Game();
+  ~Game();
 
   void PrintBoard();
 
 private:
-  static const string kHorizontalBorderSegment;
+  static const char kHorizontalBorderSegment;
   static const char kVerticalBorderSegment;
   static const int kLength;
   static const int kWidth;

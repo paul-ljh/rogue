@@ -1,11 +1,11 @@
 #include "game_view.hpp"
 
 GameView::GameView() {
-  game_model_ = GameModel();
+  game = Game();
 };
 
 GameView::~GameView() {};
 
 void GameView::DisplayGame() {
-  game_model_.PrintBoard();
+  game.PrintBoard();
 };
