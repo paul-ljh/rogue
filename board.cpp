@@ -4,15 +4,15 @@ const char Board::kHorizontalBorderSegment = '-';
 const char Board::kVerticalBorderSegment = '|';
 const int Board::kLength = 79;
 const int Board::kWidth = 25;
-const int Board::kCellsCount = Board::kLength * Board::kWidth;
+const int Board::kCellsCount = kLength * (kWidth - 2);
 
 const string Board::kTopBottomBorder = []() {
   stringstream stream;
-  stream << Board::kVerticalBorderSegment;
-  for (int i = 0; i < Board::kLength; i++) {
-    stream << Board::kHorizontalBorderSegment;
+  stream << kVerticalBorderSegment;
+  for (int i = 0; i < kLength; i++) {
+    stream << kHorizontalBorderSegment;
   }
-  stream << Board::kVerticalBorderSegment;
+  stream << kVerticalBorderSegment;
   return stream.str();
 } ();
 
@@ -31,11 +31,11 @@ void Board::PrintBoard() {
 };
 
 void Board::PrintCells() {
-  for (int i = 0; i < Board::kWidth - 2; i++) {
-    cout << Board::kVerticalBorderSegment;
-    for (int j = 0; j < Board::kLength; j++) {
-      cout << ' ';
+  for (int i = 0; i < kWidth - 2; i++) {
+    cout << kVerticalBorderSegment;
+    for (int j = 0; j < kLength; j++) {
+      cells_[i * kWidth + j]->PrintCell();
     }
-    cout << Board::kVerticalBorderSegment << endl;
+    cout << kVerticalBorderSegment << endl;
   }
 };

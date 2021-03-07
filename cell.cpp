@@ -5,4 +5,5 @@ Cell::Cell() {};
 Cell::~Cell() {};
 
 void Cell::PrintCell() {
+  cout << '.';
 };
