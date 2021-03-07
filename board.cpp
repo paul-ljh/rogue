@@ -18,6 +18,7 @@ const string Board::kTopBottomBorder = []() {
 
 Board::Board() {
   for (int i = 0; i < kCellsCount; ++i) {
+    // TODO: no need to initialize every sinle tile to be a Cell
     cells_.push_back(new Cell());
   }
 };

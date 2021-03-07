@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-#include "cell.hpp"
+#include "chamber.hpp"
 
 using namespace std;
 
@@ -26,6 +26,8 @@ private:
   static const string kTopBottomBorder;
 
   vector<Cell*> cells_;
+  vector<Chamber*> chambers_;
+
   void PrintCells();
 };
 
