@@ -25,7 +25,7 @@ private:
   static const int kCellsCount;
   static const string kTopBottomBorder;
 
-  vector<Cell*> cells_;
+  vector<vector<Cell*>> cells_;
   vector<Chamber*> chambers_;
 
   void PrintCells();

@@ -17,9 +17,13 @@ const string Board::kTopBottomBorder = []() {
 } ();
 
 Board::Board() {
-  for (int i = 0; i < kCellsCount; ++i) {
-    // TODO: no need to initialize every sinle tile to be a Cell
-    cells_.push_back(new Cell());
+  // TODO: no need to initialize every sinle tile to be a Cell
+  for (int i = 0; i < kWidth - 2; ++i) {
+    vector<Cell*> temp_vector;
+    for (int j = 0; j < kLength; ++j) {
+      temp_vector.push_back(new Cell());
+    }
+    cells_.push_back(temp_vector);
   }
 };
 
@@ -35,7 +39,7 @@ void Board::PrintCells() {
   for (int i = 0; i < kWidth - 2; i++) {
     cout << kVerticalBorderSegment;
     for (int j = 0; j < kLength; j++) {
-      cells_[i * kWidth + j]->PrintCell();
+      cells_[i][j]->PrintCell();
     }
     cout << kVerticalBorderSegment << endl;
   }
